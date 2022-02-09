@@ -1,0 +1,55 @@
+body {
+    background-image: url('../../images/pawprints6.png');
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 35px;
+}
+
+.search {
+    display: flex;
+    flex-wrap: wrap;
+    display: grid;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.search-input {
+    border-style:double;
+    border-width: 10px;
+    border-radius: 10px;
+  
+}
+
+.search-history {
+    border-style: double;
+    border-width: 10px;
+    border-radius: 10px;
+}
+
+.info {
+    display: grid;
+   
+    
+}
+.breed-info {
+    border-style:double;
+    border-width: 10px;
+    border-radius: 10px;
+}
+
+.images {
+    border-style:double;
+    border-width: 10px;
+    border-radius: 10px;
+}
+
+footer{
+    border-style:double;
+    border-width: 10px;
+    border-radius: 10px;
+}
