@@ -3,53 +3,108 @@ body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-size: 35px;
+.grid-container {
+display:grid;
 }
 
-.search {
-    display: flex;
-    flex-wrap: wrap;
-    display: grid;
-    grid-row-start: 1;
-    grid-row-end: 1;
+header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    background: linear-gradient(to right, rgba(0,255,255,.65), rgba(0,128,0,.65), rgba(255,255,0,.65));
+    border-radius: 100px;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    margin-right: 20vw;
+    margin-left: 20vw;
+    padding: 5px;
+    
+}
+
+.grid-col-1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    text-align: center;
+    margin: 10px;
+    
+}
+
+.search-area {
+    border-style:ridge;
+    border-width: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+h2 {
+    font-size: 35px;
+    font-weight: bold;
 }
 
 .search-input {
     border-style:double;
     border-width: 10px;
     border-radius: 10px;
-  
+}
+
+.search-btn {
+ cursor: pointer;
 }
 
 .search-history {
-    border-style: double;
+    display:flex;
+    flex-direction: column;
+    border-style: ridge;
     border-width: 10px;
     border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
 }
 
-.info {
-    display: grid;
-   
-    
+.history-btns{
+    margin-right: 25vw;
+    margin-left: 25vw;
 }
+
+.grid-col-2 {
+grid-column-start: 2;
+grid-column-end: 3;
+text-align: center;
+margin: 10px;
+}
+
 .breed-info {
-    border-style:double;
+    font-size: 25px;
+    border-style: ridge;
     border-width: 10px;
     border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
 }
 
-.images {
-    border-style:double;
+.breed-images {
+    border-style:ridge;
     border-width: 10px;
     border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
 }
 
-footer{
-    border-style:double;
+.grid-col-3{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+  margin: 10px;
+}
+
+.resources {
+    border-style:ridge;
     border-width: 10px;
     border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
 }

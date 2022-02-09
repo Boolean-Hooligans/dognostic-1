@@ -10,33 +10,36 @@
 </head>
 
 <body>
-    <header>
-        <h1>Dognostic</h1>
-    </header>
-<div class="search">
-    <div class="search-input">
-        <h2>Search by breed</h2>
-        <textarea>type breed here</textarea>
-        <button>Search</button>
-    </div>
-    <div class="search-history">
-        search history here
-    </div>
-</div>
-<div class="info">  
-    <div class="breed-info">
-        <textarea>info shows here</textarea>
-    </div>
-    <div class="images">
-        <image> images</image>
-        <image> pop up</image>
-        <image> here</image>
-    </div>
-</div>
-    <footer>
-        <div class="resources">
-            links to breed resources here
+    <div class="grid-container">
+        <header>
+            <h1>Dognostic</h1>
+        </header>
+        <div class="grid-col-1">
+            <div class="search-area">
+                <h2>Search by breed</h2>
+                <textarea class="search-input">type breed here</textarea>
+                <button class="search-btn">Search</button>
+            </div>
+            <div class="search-history">
+                <button class="history-btns">search</button>
+                <button class="history-btns">history</button>
+                <button class="history-btns">goes</button>
+                <button class="history-btns">here</button>
+            </div>
         </div>
-    </footer>
+        <div class="grid-col-2">
+            <div class="breed-info">Breed info shows up here</div>
+            <div class="breed-images">
+                <image> images</image>
+                <image> pop up</image>
+                <image> here</image>
+            </div>
+        </div>
+        <footer class="grid-col-3">
+            <div class="resources">
+                links to breed resources here
+            </div>
+        </footer>
+    </div>
 
 </html>
