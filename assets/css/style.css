@@ -1,34 +1,40 @@
 body {
     background-image: url('../../images/pawprints6.png');
+    background-attachment: fixed;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .grid-container {
 display:grid;
+row-gap: 10px;
+column-gap: 10px;
+
 }
 
 header {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-start:1;
+    grid-column-end:3;
     text-align: center;
-    font-size: 35px;
-    font-weight: bold;
+    border-style:ridge;
+    border-width: 10px;
+    border-radius: 10px;
     background: linear-gradient(to right, rgba(0,255,255,.65), rgba(0,128,0,.65), rgba(255,255,0,.65));
-    border-radius: 100px;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
-    margin-right: 20vw;
-    margin-left: 20vw;
-    padding: 5px;
-    
+   background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+h2 {
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .grid-col-1 {
     grid-column-start: 1;
     grid-column-end: 2;
     text-align: center;
-    margin: 10px;
-    
 }
 
 .search-area {
@@ -37,21 +43,37 @@ header {
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
+    display:grid;
+    gap: 10px;
+    justify-items: center;
 }
 
-h2 {
+h3 {
     font-size: 35px;
     font-weight: bold;
 }
 
 .search-input {
-    border-style:double;
-    border-width: 10px;
+    /* border-style:ridge; */
+    /* border-width: 10px; */
     border-radius: 10px;
+    height: 10vh;
+    width: 14vw;
 }
 
 .search-btn {
  cursor: pointer;
+ height: 5vh;
+ width: 15vw;
+ background: linear-gradient(to right, rgba(0,255,255,.65), rgba(0,128,0,.65), rgba(255,255,0,.65));
+ border-radius: 10px;
+ font-size: 20px;
+ font-weight: bold;
+ 
+}
+
+.search-btn:hover {
+    font-size: 25px;
 }
 
 .search-history {
@@ -62,22 +84,38 @@ h2 {
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
+    display:grid;
+    justify-items: center;
+
 }
 
 .history-btns{
-    margin-right: 25vw;
-    margin-left: 25vw;
+    margin-right: 5vw;
+    margin-left: 5vw;
+    height: 5vh;
+    width: 15vw;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(to right, rgba(0,255,255,.65), rgba(0,128,0,.65), rgba(255,255,0,.65));
+}
+
+.history-btns:hover {
+    font-size: 25px;
 }
 
 .grid-col-2 {
 grid-column-start: 2;
 grid-column-end: 3;
 text-align: center;
-margin: 10px;
+
 }
 
 .breed-info {
     font-size: 25px;
+    /* font-weight: bold; */
     border-style: ridge;
     border-width: 10px;
     border-radius: 10px;
@@ -90,21 +128,30 @@ margin: 10px;
     border-width: 10px;
     border-radius: 10px;
     padding: 10px;
-    margin: 10px;
+    margin:10px;
 }
 
 .grid-col-3{
   grid-column-start: 1;
   grid-column-end: 3;
-  text-align: center;
-  margin: 10px;
 }
 
 .resources {
     border-style:ridge;
     border-width: 10px;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
     margin: 10px;
+    text-align: center;
+    background: linear-gradient(to right, rgba(0,255,255,.65), rgba(0,128,0,.65), rgba(255,255,0,.65));
 }
-}
+ a {
+    
+    font-size: 25px;
+    font-weight: bold;
+     color: black;
+     margin: 30px;
+ }
+  a:hover {
+    font-size: 30px;
+  }
