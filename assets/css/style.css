@@ -2,24 +2,26 @@ body {
     background-image: url('../../images/pawprints6.png');
     background-attachment: fixed;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
 }
 
-.grid-container {
-display:grid;
+.container {
+display: flex;
 row-gap: 10px;
 column-gap: 10px;
-
+margin: 10px;
 }
 
 header {
-    grid-column-start:1;
-    grid-column-end:3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
     border-style:ridge;
     border-width: 10px;
     border-radius: 10px;
     background: linear-gradient(to right, rgba(0,255,255,.65), rgba(0,128,0,.65), rgba(255,255,0,.65));
-   background-repeat: no-repeat;
+    background-repeat: no-repeat;
 }
 
 h1 {
@@ -31,21 +33,19 @@ h2 {
     font-weight: bold;
 }
 
-.grid-col-1 {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    text-align: center;
+.left-column {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .search-area {
+    text-align: center;
     border-style:ridge;
     border-width: 10px;
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
-    display:grid;
-    gap: 10px;
-    justify-items: center;
 }
 
 h3 {
@@ -54,8 +54,6 @@ h3 {
 }
 
 .search-input {
-    /* border-style:ridge; */
-    /* border-width: 10px; */
     border-radius: 10px;
     height: 10vh;
     width: 14vw;
@@ -69,7 +67,6 @@ h3 {
  border-radius: 10px;
  font-size: 20px;
  font-weight: bold;
- 
 }
 
 .search-btn:hover {
@@ -77,21 +74,14 @@ h3 {
 }
 
 .search-history {
-    display:flex;
-    flex-direction: column;
     border-style: ridge;
     border-width: 10px;
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
-    display:grid;
-    justify-items: center;
-
 }
 
 .history-btns{
-    margin-right: 5vw;
-    margin-left: 5vw;
     height: 5vh;
     width: 15vw;
     margin: 10px;
@@ -106,14 +96,14 @@ h3 {
     font-size: 25px;
 }
 
-.grid-col-2 {
-grid-column-start: 2;
-grid-column-end: 3;
-text-align: center;
-
+.right-column {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .breed-info {
+    text-align: center;
     font-size: 25px;
     /* font-weight: bold; */
     border-style: ridge;
@@ -124,34 +114,88 @@ text-align: center;
 }
 
 .breed-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     border-style:ridge;
     border-width: 10px;
     border-radius: 10px;
-    padding: 10px;
-    margin:10px;
-}
-
-.grid-col-3{
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.resources {
-    border-style:ridge;
-    border-width: 10px;
-    border-radius: 10px;
-    padding: 20px;
     margin: 10px;
+}
+
+img {
+    margin: 10px;
+}
+
+footer {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
     text-align: center;
+    border-style:ridge;
+    border-width: 10px;
+    border-radius: 10px; 
+    padding: 10px;
     background: linear-gradient(to right, rgba(0,255,255,.65), rgba(0,128,0,.65), rgba(255,255,0,.65));
 }
+
+/* .resources {
+
+} */
+
  a {
-    
     font-size: 25px;
     font-weight: bold;
-     color: black;
-     margin: 30px;
+    color: black;
+    margin: 20px;
  }
+
   a:hover {
     font-size: 30px;
+  }
+
+
+
+  /* media queries */
+
+  @media screen and (max-width: 980px) {
+:root {
+    width: 
+}
+   
+    a {
+        display:grid;
+        grid-column: auto;
+    }
+
+
+  }
+
+  @media screen and (max-width: 768px) {
+:root {
+    width: 100%;
+}
+  }
+
+  @media screen and (max-width: 575px) {
+
+.search-btn {
+    font-size: 10px;
+}
+
+.search-btn:hover {
+    font-size: 12px;
+}
+
+.history-btns {
+    font-size: 10px;
+}
+
+.history-btns:hover {
+    font-size: 12px;
+}
+
+
+
   }
