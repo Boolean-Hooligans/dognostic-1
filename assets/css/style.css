@@ -33,7 +33,7 @@ h2 {
     font-weight: bold;
 }
 
-.left-column {
+.banner-message {
     display:flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -102,7 +102,7 @@ h3 {
     justify-content: center;
 }
 
-.breed-info {
+#breed-data-table {
     text-align: center;
     font-size: 25px;
     /* font-weight: bold; */
@@ -113,7 +113,7 @@ h3 {
     margin: 10px;
 }
 
-.breed-images {
+#breed-image {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -151,35 +151,40 @@ footer {
     margin: 20px;
  }
 
-  a:hover {
+  /* a:hover {
     font-size: 30px;
-  }
+  } */
 
 
 
   /* media queries */
 
   @media screen and (max-width: 980px) {
-:root {
-    width: 
-}
    
-    a {
+   
+    /* a {
         display:grid;
         grid-column: auto;
-    }
+    } */
+
 
 
   }
 
   @media screen and (max-width: 768px) {
-:root {
-    width: 100%;
-}
+
   }
 
   @media screen and (max-width: 575px) {
 
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        row-gap: 10px;
+        column-gap: 10px;
+        margin: 10px;
+        }
 .search-btn {
     font-size: 10px;
 }
@@ -195,7 +200,4 @@ footer {
 .history-btns:hover {
     font-size: 12px;
 }
-
-
-
   }
