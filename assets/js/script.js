@@ -63,11 +63,11 @@ function getDogByBreed(breed_id) {
   })
 }
 // triggered when the breed select control changes
-function getDogImage(breed_id) {
-  console.log('breed_id: ', breed_id);
+function getDogImage(image_id) {
+  console.log('breed_id: ', image_id);
   
   // search for images that contain the breed (breed_id=) and attach the breed object (include_breed=1)
-  fetch('https://api.thedogapi.com/v1/images/' + breed_id, {
+  fetch('https://api.thedogapi.com/v1/images/' + image_id, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/vnd.api+json',
@@ -111,41 +111,6 @@ function displayBreed(info) {
   });
 }
 
-//make an Ajax request
-// function ajax_get() {
-//   fetch('https://api.thedogapi.com/v1/breeds', {
-//     method: 'GET',
-//     headers: {
-//       'Content-Type': 'application/vnd.api+json',
-//       'Authentication': 'ef3680c6-31d5-47a8-88f2-51bfa1e66f94'
-//     },
-//   })
-//   .then(response => response.json())
-//   .then(data => {
-//     //console.log('Success:', data);
-//   })
-//   .catch((error) => {
-//     console.error('Error:', error);
-//   });
-
-
-  // var xmlhttp = new XMLHttpRequest();
-  // xmlhttp.onreadystatechange = function() {
-  //   if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-  //     console.log('responseText:' + xmlhttp.responseText);
-  //     try {
-  //       var data = JSON.parse(xmlhttp.responseText);
-  //     } catch (err) {
-  //       console.log(err.message + " in " + xmlhttp.responseText);
-  //       return;
-  //     }
-  //     callback(data);
-  //   }
-  // };
-
-  // xmlhttp.open("GET", url, true);
-  // xmlhttp.send();
-//}
 // call the getBreeds function which will load all the Dog breeds into the select control
 
 
@@ -172,7 +137,7 @@ fetch('https://api.thedogapi.com/v1/breeds', {
 }
 
 
-
+// fetch dog daily news
 fetch("https://daily-dog-news.p.rapidapi.com/news/ap", {
   "method": "GET",
 	"headers": {
