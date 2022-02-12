@@ -5,14 +5,6 @@ body {
     
 }
 
-/* header, left column and right column */
-.container {
-display: flex;
-row-gap: 10px;
-column-gap: 10px;
-margin: 10px;
-}
-
 /* header styles */
 header {
     display: flex;
@@ -38,13 +30,24 @@ h2 {
     font-weight: bold;
 }
 
+/* column 1,2,3 */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 10px;
+    column-gap: 10px;
+    margin: 10px;
+    align-items: center;
+    }
+
 /* select breed container and search history container on left */
 .column-1{
     display:flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    width: 25vw;
+    /* width: 25vw; */
 }
 
 /* select a breed container */
@@ -104,7 +107,7 @@ h3 {
 }
 
 /* breed info container */
-.colunm-2 {
+.column-2 {
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -121,7 +124,7 @@ h3 {
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
-    height: 500px;
+    height: 400px;
     width: 700px;
     background-color: white;
     /* background: linear-gradient(to right, rgba(0,255,255,.40), rgba(0,128,0,.40), rgba(255,255,0,.40)); */
@@ -129,6 +132,7 @@ h3 {
 
 /* contains breed image */
 .column-3 {
+    
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -138,8 +142,8 @@ h3 {
 /* breed image */
 #breed_image {
     margin: 10px;
-    height: 600px;
-    width: 500px;
+    height: 400px;
+    width: 350px;
     border-style: ridge;
     border-width: 10px;
     border-radius: 10px;
