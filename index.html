@@ -17,37 +17,48 @@
             is right for you!</h2>
     </header>
     <div class="container">
-        <div class="left-column">
-            <div class="search-area">
-                <h3>Search by Breed</h3>
-                <textarea class="search-input">ENTER NAME OF BREED</textarea>
-                <button class="search-btn">SEARCH</button>
+        <div class="column-1">
+             <div class="search-area">
+                <h3>Select a Breed</h3>
+                <div id="banner-message">
+
+                    <!-- <input class="breed_search"/> -->
+
+                    <select class="breed_select">
+                        <option></option>
+                    </select>
+                </div>
             </div>
+
             <div class="search-history">
                 <button class="history-btns">SEARCH</button>
                 <button class="history-btns">HISTORY</button>
                 <button class="history-btns">GOES</button>
                 <button class="history-btns">HERE</button>
             </div>
+
         </div>
-        <div class="right-column">
-            <div class="breed-info">The Plott Hound is a cunning and confident big-game hunting dog with a fierce and
-                tenacious nature on the trail and an even, affectionate and loyal temperament in the home. They hail
-                from the mountains of western North Carolina and are the only coonhound breed not descended from the
-                Foxhound. They stands out for their speed and spirit. If you want a dog that can hunt anything from
-                raccoon to bear, the Plott is for you. </div>
-            <div class="breed-images">
-                <img src="images/Waldo.JPG" style="width:250px;height:350px;">
-                <img src="images/Arlene.JPG" style="width:250px;height:350px;">
-                <img src="images/Violet.jpg" style="width:250px;height:350px;">
-            </div>
+
+        <div class="column-2" id="breed_data">
+            <table id="breed_data_table"></table>
         </div>
-    </div>   
-        <footer>
-            <div class="resources">
-                <a href="https://www.instagram.com/adventure.brindles/">Cute Mutts</a>
-                <a href="https://en.wikipedia.org/wiki/List_of_dog_breeds">Wikipedia Breed Info</a>
-                <a href="https://www.akc.org/dog-breeds/plott-hound/">AKC Plott Hound</a>
-            </div>
-        </footer>
+
+        <div class="column-3"></div>
+            <img id="breed_image" src="" />
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="resources">
+            <a href="https://www.petfinder.com">petfinder.com</a>
+            <a href="https://en.wikipedia.org/wiki/List_of_dog_breeds">more info @ wikipedia</a>
+            <a href="https://www.akc.org/dog-breeds/">AKC breed lists</a>
+            <a href ="http://www.amazon.com">link to books about the breed</a>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
 </html>
