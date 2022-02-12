@@ -1,3 +1,4 @@
+//key to get into dog API
 api_key = 'ef3680c6-31d5-47a8-88f2-51bfa1e66f94'
 
 var breeds;
@@ -49,7 +50,7 @@ function populateBreedsSelect(breeds) {
 // triggered when the breed select control changes
 function getDogByBreed(breed_id) {
   // search for images that contain the breed (breed_id=) and attach the breed object (include_breed=1)
-  ajax_get('https://api.thedogapi.com/v1/images/search?include_breed=1&breed_id&headers["x-api-key"]=' + breed_id, function(data) {
+  ajax_get('https://api.thedogapi.com/v1/images/search?include_breed=1&breed_id' + breed_id, function(data) {
 
     if (data.length == 0) {
       // if there are no images returned
