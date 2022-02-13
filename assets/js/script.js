@@ -4,8 +4,8 @@ api_key = 'ef3680c6-31d5-47a8-88f2-51bfa1e66f94'
 var breeds;
 
 $('.breed_search').on('input', function(e) {
-  var search_str = $(this).val();
-  searchBreeds(search_str);
+var search_str = $(this).val();
+searchBreeds(search_str);
 });
 
 function searchBreeds(search_str) {
@@ -113,7 +113,7 @@ function displayBreed(info) {
 
 // call the getBreeds function which will load all the Dog breeds into the select control
 
-
+  
 
 
 function dogBreedApi() {
