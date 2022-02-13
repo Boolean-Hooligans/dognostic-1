@@ -5,24 +5,8 @@ var breeds;
 
 $('.breed_search').on('input', function(e) {
   var search_str = $(this).val();
-  searchBreeds(search_str);
 });
 
-function searchBreeds(search_str) {
-  var string_length = search_str.length // get the length of the search string so we know how many characters of the breed name to compare it to
-  search_str = search_str.toLowerCase(); // ensure search string and breed name are same case otherwise they won't match
-  for (var i = 0; i < breeds.length; i++) // loop through all the breeds in order
-  {
-    var breed_name_snippet = breeds[i].name.substr(0, string_length).toLowerCase(); // get the first few charcters of the name
-    if (breed_name_snippet == search_str) {
-      console.log(breed_name_snippet)
-      console.log(search_str)
-      getDogByBreed(breeds[i].id) // show the breed
-      console.log(breeds)
-      return; // return the function so we don't keep searching
-    }
-  }
-}
 
 // Setup the Controls
 var $breed_select = $('select.breed_select');
