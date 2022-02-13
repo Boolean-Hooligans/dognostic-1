@@ -139,7 +139,7 @@ fetch('https://api.thedogapi.com/v1/breeds', {
 
 // fetch dog daily news
 
-function randomDogFacts() {
+function randomDogNews() {
 fetch("https://daily-dog-news.p.rapidapi.com/news", {
 	"method": "GET",
 	"headers": {
@@ -149,13 +149,20 @@ fetch("https://daily-dog-news.p.rapidapi.com/news", {
 })
 .then(response => response.json())
 .then(data => {
-	console.log('success:', data);
+	console.log('Success:', data);
 })
 .catch(error => {
 	console.error('error', error);
 });
 }
-randomDogFacts();
+randomDogNews();
+
+
+function displayDogFacts() {
+  $('random-facts')
+}
+
+
 
 //loads everything in order
 window.onload = function() {
