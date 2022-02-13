@@ -138,19 +138,26 @@ fetch('https://api.thedogapi.com/v1/breeds', {
 
 
 // fetch dog daily news
-fetch("https://daily-dog-news.p.rapidapi.com/news/ap", {
-  "method": "GET",
+
+function randomDogFacts() {
+fetch("https://daily-dog-news.p.rapidapi.com/news", {
+	"method": "GET",
 	"headers": {
-    "x-rapidapi-host": "daily-dog-news.p.rapidapi.com",
-		"x-rapidapi-key": "a771196338msh274eb7df871c5dfp1ddb90jsn462f123fdc7f"
+		"x-rapidapi-host": "daily-dog-news.p.rapidapi.com",
+		"x-rapidapi-key": "5f11a0be5fmsh5a12f34eab0b62bp10b603jsn304276e4e806"
 	}
 })
-.then(response => {
-  console.log(response);
+.then(response => response.json())
+.then(data => {
+	console.log('success:', data);
 })
-.catch(err => {
-  console.error(err);
+.catch(error => {
+	console.error('error', error);
 });
+}
+randomDogFacts();
+
+//loads everything in order
 window.onload = function() {
 dogBreedApi();
 }
