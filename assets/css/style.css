@@ -10,64 +10,12 @@ header {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
     border-style:ridge;
     border-width: 10px;
     border-radius: 10px;
-    background: linear-gradient(to right, aqua, mediumaquamarine, teal);
-    background-repeat: no-repeat;
 }
-
-/* name of page */
-.name { 
-    font-size: 55px;
-    font-weight: bold;
-    text-align: center;
-}
-
-/*page description*/
-.description {
-    width: 75rem;
-    font-size: 35px;
-    font-weight: bold;
-    text-align: center;
-}
-
-/* contains search area, breed data table, & breed image */
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
-    margin: 10px;
-    align-items: center;
-    }
-
-
-/* select a breed/history buttons container */
-.search-area {
-    text-align: center;
-    border-style:ridge;
-    border-width: 10px;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-    background-color: lightgrey;
-}
-
- /* "select a breed" */
-h3 {
-    font-size: 35px;
-    font-weight: bold;
-}
-
-/* contains search drop down menu
-#banner-message{
-   
-} */
 
 .breed_select {
-    font-size: 25px;
     font-weight: bold;
     cursor:pointer;
     padding: 10px;
@@ -81,30 +29,15 @@ h3 {
 .search-history {
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 10px;
-    margin: 10px;
 }
 
 /* search history buttons */
-.history-btns{
-    height: 8vh;
-    width: 18vw;
+.button{
     margin: 10px;
-    border-radius: 10px;
-    font-size: 25px;
     font-weight: bold;
     cursor: pointer;
-    background-color: mediumaquamarine;
 }
-.history-btns:hover {
-    font-size: 28px;
-}
-
-/* breed info container */
-/* #breed_data {
-    
-} */
 
 /* breed info */
 #breed_data_table {
@@ -121,11 +54,6 @@ h3 {
     /* border-color: black; */
 }
 
-/* contains breed image
-.breed-image {
-    
-} */
-
 /* breed image */
 #breed_image {
     background-color: lightgrey;
@@ -137,66 +65,3 @@ h3 {
     border-width: 10px;
     border-radius: 10px;
 }
-
-
-
-footer {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: center;
-    text-align: center;
-    border-style:ridge;
-    border-width: 10px;
-    border-radius: 10px; 
-    padding: 10px;
-    background: linear-gradient(to right, aqua, mediumaquamarine, teal);
-}
-
-.resources {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-
-  /* media queries */
-
-  @media screen and (max-width: 980px) {
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-
-  }
-
-  @media screen and (max-width: 768px) {
-
-  }
-
-  @media screen and (max-width: 575px) {
-
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        row-gap: 10px;
-        column-gap: 10px;
-        margin: 10px;
-        }
-.search-btn {
-    font-size: 10px;
-}
-
-.search-btn:hover {
-    font-size: 12px;
-}
-
-.history-btns {
-    font-size: 10px;
-}
-
-.history-btns:hover {
-    font-size: 12px;
-}
-  }
