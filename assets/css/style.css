@@ -14,7 +14,8 @@ header {
     /* border-style:ridge; */
     border-width: 10px;
     border-radius: 10px;
-    background: linear-gradient(to right, rgba(0,255,255,.65), rgba(0,128,0,.65), rgba(255,255,0,.65));
+    background-color: #8fbc8f;
+    /* background: linear-gradient(to right, rgba(0,255,255,.65), rgba(0,128,0,.65), rgba(255,255,0,.65)); */
     background-repeat: no-repeat;
 }
 
@@ -100,7 +101,7 @@ h3 {
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
-    background: linear-gradient(to right, rgba(0,255,255,.65), rgba(0,128,0,.65), rgba(255,255,0,.65));
+    /* background: linear-gradient(to right, rgba(0,255,255,.65), rgba(0,128,0,.65), rgba(255,255,0,.65)); */
 }
 .history-btns:hover {
     font-size: 25px;
@@ -169,7 +170,7 @@ footer {
  a {
     font-size: 25px;
     font-weight: bold;
-    color: black;
+    color: #36454f;
     margin: 20px;
  }
 
@@ -183,8 +184,8 @@ footer {
 
   @media screen and (max-width: 980px) {
 :root {
-    width: 
-}
+    width: 100%;
+    }
    
     a {
         display:grid;
