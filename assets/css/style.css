@@ -118,6 +118,7 @@ h3 {
     height: 500px;
     width: 600px;
     background-color: lightgrey;
+    /* border-color: black; */
 }
 
 /* contains breed image
@@ -127,6 +128,8 @@ h3 {
 
 /* breed image */
 #breed_image {
+    background-color: lightgrey;
+    /* border-color: black; */
     margin: 10px;
     height: 500px;
     width: 600px;

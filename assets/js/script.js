@@ -80,7 +80,7 @@ function getDogImage(image_id) {
     if (data.length == 0) {
       // if there are no images returned
       clearBreed();
-      $("#breed_data_table").append("<tr><td>Sorry, no Image for that breed yet</td></tr>");
+      $("#breed_data_table").append("<tr><td>Sorry, there is no image available for that breed yet.</td></tr>");
     } else {
       //else display the breed image and data
       console.log('data: ', data);
@@ -155,7 +155,20 @@ window.onload = function() {
 dogBreedApi();
 }
 
+//function on click, save data from .breed_select, #breed_data_table, and #breed_image to local storage 
+//event listener for click on save1, save2, save3, save4 buttons to display info from local storage 
+
+//$('.save1').click(function () {
+//   console.log($(this).sibli('.breed_select').attr('id'))
+//   console.log( $(this).siblings('.description').val())
+
+//   localStorage.setItem($(this).siblings('textarea').attr('id'), $(this).siblings('.description').val());
+//   console.log('clicked');
+// });
+
+
 //  function saveBreeds (){
 //    localStorage.setItem("breed_select", JSON.stringify(data));
+
 // console.log(data);
 //  };
