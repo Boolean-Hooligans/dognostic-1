@@ -5,24 +5,8 @@ var breeds;
 
 $('.breed_search').on('input', function(e) {
   var search_str = $(this).val();
-  searchBreeds(search_str);
 });
 
-function searchBreeds(search_str) {
-  var string_length = search_str.length // get the length of the search string so we know how many characters of the breed name to compare it to
-  search_str = search_str.toLowerCase(); // ensure search string and breed name are same case otherwise they won't match
-  for (var i = 0; i < breeds.length; i++) // loop through all the breeds in order
-  {
-    var breed_name_snippet = breeds[i].name.substr(0, string_length).toLowerCase(); // get the first few charcters of the name
-    if (breed_name_snippet == search_str) {
-      console.log(breed_name_snippet)
-      console.log(search_str)
-      getDogByBreed(breeds[i].id) // show the breed
-      console.log(breeds)
-      return; // return the function so we don't keep searching
-    }
-  }
-}
 
 // Setup the Controls
 var $breed_select = $('select.breed_select');
@@ -138,19 +122,61 @@ fetch('https://api.thedogapi.com/v1/breeds', {
 
 
 // fetch dog daily news
-fetch("https://daily-dog-news.p.rapidapi.com/news/ap", {
-  "method": "GET",
+
+function randomDogNews() {
+fetch("https://daily-dog-news.p.rapidapi.com/news", {
+	"method": "GET",
 	"headers": {
-    "x-rapidapi-host": "daily-dog-news.p.rapidapi.com",
-		"x-rapidapi-key": "a771196338msh274eb7df871c5dfp1ddb90jsn462f123fdc7f"
+		"x-rapidapi-host": "daily-dog-news.p.rapidapi.com",
+		"x-rapidapi-key": "5f11a0be5fmsh5a12f34eab0b62bp10b603jsn304276e4e806"
 	}
 })
-.then(response => {
-  console.log(response);
+.then(response => response.json())
+
+.then(data => {
+  displayDogFacts(data)
+	console.log('Success:', data);
 })
-.catch(err => {
-  console.error(err);
+.catch(error => {
+	console.error('error', error);
 });
-window.onload = function() {
-dogBreedApi();
+}
+
+//pulls the title and url from the API data
+function displayDogFacts(info) {
+  $('.title1').append(info[0].title)
+  window.open($('.title1').click(function() {
+  $(this).attr('href', info[0].url);
+  }))
+
+  $('.title2').append(info[1].title)
+  window.open($('.title2').click(function() {
+  $(this).attr('href', info[1].url);
+  }))
+
+  $('.title3').append(info[2].title)
+  window.open($('.title3').click(function() {
+  $(this).attr('href', info[2].url);
+  }))
+
+  $('.title4').append(info[3].title)
+  window.open($('.title4').click(function() {
+  $(this).attr('href', info[3].url);
+  }))
+
+
+$('.title5').append(info[4].title)
+  window.open($('.title5').click(function() {
+  $(this).attr('href', info[4].url);
+  }))
+
+}
+
+  
+  
+  
+  //loads everything in order
+  window.onload = function() {
+    dogBreedApi();
+    randomDogNews();
 }
