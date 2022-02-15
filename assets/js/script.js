@@ -136,14 +136,13 @@ fetch("https://daily-dog-news.p.rapidapi.com/news", {
 .then(data => {
   displayDogFacts(data)
 	console.log('Success:', data);
-  //displayDogFacts(data)
 })
 .catch(error => {
 	console.error('error', error);
 });
 }
 
-
+//pulls the title and url from the API data
 function displayDogFacts(info) {
   $('.title1').append(info[0].title)
   window.open($('.title1').click(function() {
