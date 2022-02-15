@@ -132,23 +132,52 @@ fetch("https://daily-dog-news.p.rapidapi.com/news", {
 	}
 })
 .then(response => response.json())
+
 .then(data => {
+  displayDogFacts(data)
 	console.log('Success:', data);
+  //displayDogFacts(data)
 })
 .catch(error => {
 	console.error('error', error);
 });
 }
-randomDogNews();
 
 
-function displayDogFacts() {
-  $('random-facts')
+function displayDogFacts(info) {
+  $('.title1').append(info[0].title)
+  window.open($('.title1').click(function() {
+  $(this).attr('href', info[0].url);
+  }))
+
+  $('.title2').append(info[1].title)
+  window.open($('.title2').click(function() {
+  $(this).attr('href', info[1].url);
+  }))
+
+  $('.title3').append(info[2].title)
+  window.open($('.title3').click(function() {
+  $(this).attr('href', info[2].url);
+  }))
+
+  $('.title4').append(info[3].title)
+  window.open($('.title4').click(function() {
+  $(this).attr('href', info[3].url);
+  }))
+
+
+$('.title5').append(info[4].title)
+  window.open($('.title5').click(function() {
+  $(this).attr('href', info[4].url);
+  }))
+
 }
 
-
-
-//loads everything in order
-window.onload = function() {
-dogBreedApi();
+  
+  
+  
+  //loads everything in order
+  window.onload = function() {
+    dogBreedApi();
+    randomDogNews();
 }
