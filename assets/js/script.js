@@ -108,6 +108,10 @@ function displayBreed(info) {
   // create table element for breed facts
   var table_element = $("<div>");
 
+  var string = "breed_group";
+  var string = "life_span";
+  var string = string.replaceAll("_", " ");
+
   // create image box
   var breed_image = $("<img>");
   breed_image.attr("class", "image");
