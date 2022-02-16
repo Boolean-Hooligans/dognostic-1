@@ -13,6 +13,18 @@ header {
     border-style:ridge;
     border-width: 10px;
     border-radius: 10px;
+    margin: 10px;
+}
+
+/* #banner_message {
+    need to center
+} */
+
+h3 {
+    text-align: center;
+    padding: 10px;
+    font-size: 35px;
+    border-radius: 45px;
 }
 
 .breed_select {
@@ -37,31 +49,49 @@ header {
     margin: 10px;
     font-weight: bold;
     cursor: pointer;
+    font-size: 35px;
+    border-radius: 45px;
+
+}
+.button:hover {
+    font-size: 30px;
 }
 
-/* breed info */
-#breed_data_table {
+breed info
+.table {
     font-size: 30px;
     font-weight: bold;
-    border-style: ridge;
+    border-style: ridge; 
     border-width: 10px;
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
-    height: 500px;
-    width: 600px;
-    background-color: lightgrey;
-    /* border-color: black; */
 }
 
-/* breed image */
-#breed_image {
-    background-color: lightgrey;
-    /* border-color: black; */
-    margin: 10px;
-    height: 500px;
-    width: 600px;
+#random-news {
     border-style: ridge;
-    border-width: 10px;
+    border-color: aqua;
     border-radius: 10px;
+    border-width: 10px;
+    margin: 10px;
+}
+
+a {
+    color: black;
+    text-align: center;
+}
+a:hover {
+    color: teal;
+
+}
+#footer {
+    margin: 10px;
+    border-style: ridge;
+    border-radius: 10px;
+    border-width: 10px;
+}
+
+.foot {
+    font-size: 30px;
+    font-weight: bold;
 }
