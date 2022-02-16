@@ -86,7 +86,7 @@ function displayBreed(info) {
 
     if (key.indexOf("_") > 0) {
       key = key.replace(/_/g, " ");
-      console.log("HEY - OH");
+      // console.log(data);
     }
 
     // add a row to the table
