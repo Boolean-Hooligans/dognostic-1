@@ -2,22 +2,77 @@
 api_key = 'ef3680c6-31d5-47a8-88f2-51bfa1e66f94'
 
 var breeds;
+// save breeds buttons
 
+const saveToLocalStorage = (breed_id) => {
+localStorage.setItem('save1', "id")
+}
+function saveBreed(selectedButton){
+ 
+  // get selected button text content
+  var button1Text = document.getElementById("save1").textContent;
+  var button2Text = document.getElementById("save2").textContent;
+  var button3Text = document.getElementById("save3").textContent;
+  var button4Text = document.getElementById("save4").textContent;
+
+  // check if selected button text content = "SAVE BREED" or something else...
+
+  // If "SAVE BREED" -> save currently selected breed from drop-down to selected button
+
+
+  if (selectedButton === 1) {
+    if (button1Text === "SAVE BREED") {
+      document.getElementById("save1").textContent = breed_select.children(":selected").attr("id");
+    
+    } else {
+      getDogByBreed(button1Text);//ask jordan how to change drop down menu with value
+    }
+  }
+  if (selectedButton === 2) {
+    if (button2Text === "SAVE BREED") {
+      document.getElementById("save2").textContent = breed_select.children(":selected").attr("id");
+    
+    } else {
+      getDogByBreed(button2Text);//ask jordan how to change drop down menu with value
+    }
+  }
+  if (selectedButton === 3) {
+    if (button3Text === "SAVE BREED") {
+      document.getElementById("save3").textContent = breed_select.children(":selected").attr("id");
+    
+    } else {
+      getDogByBreed(button3Text);//ask jordan how to change drop down menu with value
+    }
+  }
+  if (selectedButton === 4) {
+    if (button4Text === "SAVE BREED") {
+      document.getElementById("save4").textContent = breed_select.children(":selected").attr("id");
+    
+    } else {
+      getDogByBreed(button4Text);//ask jordan how to change drop down menu with value
+    }
+  }
+  
+}
+
+
+
+// Breed search
 $('.breed_search').on('input', function (e) {
   var search_str = $(this).val();
 });
 
 // Setup the Controls
-var $breed_select = $('select.breed_select');
-$breed_select.change(function () {
-  var id = $(this).children(":selected").attr("id");
+var breed_select = $('select.breed_select');
+breed_select.change(function () {
+  var id = $(this).children(":selected").attr("id");// export jquery to save breed function
   console.log(id)
   getDogByBreed(id)
 });
 
 // Put the breeds in the Select control
 function populateBreedsSelect(breeds) {
-  $breed_select.empty().append(function () {
+  breed_select.empty().append(function () {
     var output = '';
     $.each(breeds, function (key, value) {
       output += '<option id="' + value.name + '">' + value.name + '</option>';
@@ -28,7 +83,7 @@ function populateBreedsSelect(breeds) {
 function getDogByBreed(breed_id) {
   console.log('breed_id: ', breed_id);
 
-  // search for images that contain the breed (breed_id=) and attach the breed object (include_breed=1)
+  // search for images that contain the breed (breed_id=) and attach the breed object (include_breed=1)get dog breed vs get dog image
   fetch('https://api.thedogapi.com/v1/breeds/search?q=' + breed_id, {
     method: 'GET',
     headers: {
