@@ -11,7 +11,7 @@
 </head>
 
 <body class="body">
-    <header class="section has-background-primary">
+    <header class="section">
         <h1 class='title is-size-1 has-text-centered'>DOGNOSTIC</div>
             <h2 class='subtitle is-size-2 has-text-centered'>
                 The one stop shop for all the info and photos you'll need to decide what dog breed or
@@ -20,18 +20,20 @@
     </header>
     <div class="columns is-centered is-vcentered is-multiline">
         <div class="column is-one-quarter">
-            <h3 class="title is-size-1 has-background-info">Select a Breed</h3>
-            <div id="banner-message">
-                <!-- <input class="breed_search"/> -->
-                <select class="breed_select is-size-3">
-                    <option></option>
-                </select>
+            <div class='select-div has-background-info'>
+                <h3 class="title is-size-1">Select a Breed:</h3>
+                <div id="banner-message">
+                    <!-- <input class="breed_search"/> -->
+                    <select class="breed_select is-size-3">
+                        <option></option>
+                    </select>
+                </div>
             </div>
             <div class="search-history">
-                <a class="button has-background-primary" id="save1">SAVE BREED</a>
-                <a class="button has-background-primary" id="save2">SAVE BREED</a>
-                <a class="button has-background-primary" id="save3">SAVE BREED</a>
-                <a class="button has-background-primary" id="save4">SAVE BREED</a>
+                <a class="button" id="save1">SAVE BREED</a>
+                <a class="button" id="save2">SAVE BREED</a>
+                <a class="button" id="save3">SAVE BREED</a>
+                <a class="button" id="save4">SAVE BREED</a>
             </div>
         </div>
 
@@ -44,7 +46,7 @@
             <img id="breed_image" src="" />
         </div>
 
-        <div class="column is-11 is-size-3 has-background-grey-light" id="random-news">
+        <div class="column is-11 is-size-3" id="random-news">
             <h2 class="title has-text-centered is-size-2">Dogs in the News!</h2>
             <a href="" class="title1 column is-underlined"></a>
             <a href="" class="title2 column is-underlined"></a>
