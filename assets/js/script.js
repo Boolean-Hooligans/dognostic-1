@@ -84,14 +84,26 @@ function clearBreed() {
 function displayBreed(info) {
   $("#breed_image").attr("src", info.url);
   $("#breed_data_table tr").remove();
-  console.log(info);
+
   var breed_data = info.breeds[0];
   $.each(breed_data, function (key, value) {
     // as 'weight' and 'height'
-    if (key == "weight" || key == "height") value = value.metric;
+    if (key == "weight" || key == "height") {
+      value = value.metric;
+    }
+
+    if (key.indexOf("_") > 0) {
+      key = key.replace(/_/g, " ");
+    }
+
     // add a row to the table
     $("#breed_data_table").append(
-      "<tr><td>" + key + "</td><td>" + value + "</td></tr>"
+      // "<tr><td>" + key + "</td><td>" + value + "</td></tr>"
+      "<div class='columns'><div class='column'>" +
+        key +
+        "</div><div class='column'>" +
+        value +
+        "</div></div>"
     );
   });
 }
@@ -108,12 +120,9 @@ function dogBreedApi() {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log("Success:", data);
       populateBreedsSelect(data);
     })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
+    .catch((error) => {});
 }
 
 // fetch dog daily news
@@ -129,11 +138,8 @@ function randomDogNews() {
 
     .then((data) => {
       displayDogFacts(data);
-      console.log("Success:", data);
     })
-    .catch((error) => {
-      console.error("error", error);
-    });
+    .catch((error) => {});
 }
 
 //pulls the title and url from the API data
