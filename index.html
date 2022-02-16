@@ -10,18 +10,19 @@
     <title>Dognostic</title>
 </head>
 
-<body>
+<body class="body">
     <header class="section has-background-primary">
+
         <h1 class='title is-size-1 has-text-centered'>DOGNOSTIC-"We believe in dogs"</div>
         <h2 class='subtitle is-size-2 has-text-centered'>
             The one stop shop for all the info and photos you'll need to decide what dog breed or
             breed mix is right for you!
         </h2>
-    </header>
-    <div class="columns is-vcentered is-multiline"> 
 
-        <div class="column is-narrow">
-            <h3 class="title is-size-2 has-text-centered has-background-info">Select a Breed</h3>
+    </header>
+    <div class="columns is-centered is-vcentered is-multiline">
+        <div class="column is-one-quarter">
+            <h3 class="title is-size-1 has-background-info">Select a Breed</h3>
             <div id="banner-message">
                 <!-- <input class="breed_search"/> -->
                 <select class="breed_select is-size-3">
@@ -29,6 +30,7 @@
                 </select>
             </div>
             <div class="search-history">
+<
                 <button class="button is-rounded is-large has-background-primary is-size-3" id="save1" onclick="saveBreed(1)">SAVE BREED</button>
                 <button class="button is-rounded is-large has-background-primary is-size-3" id="save2" onclick="saveBreed(2)">SAVE BREED</button>
                 <button class="button is-rounded is-large has-background-primary is-size-3" id="save3" onclick="saveBreed(3)">SAVE BREED</button>
@@ -36,31 +38,33 @@
             </div>
         </div>
 
-        <div class='column' id="breed_data">
-            <table id="breed_data_table"></table>
+        <div class='column is-one-third' id="breed_data">
+            <div class="table is-size-4" id="breed_data_table"></div>
+
+
         </div>
 
-        <div class="column">
+        <div class="column is-one-third">
             <img id="breed_image" src="" />
         </div>
-    </div>
 
-    <div class="columns">
-            <div class="news is-size-3 has-background-grey-light" id="random-news">
-                <h2 class="title has-text-centered is-size-2">Dogs in the News!</h2>
-                <a href="" class="title1 column is-underlined"></a>
-                <a href="" class="title2 column is-underlined"></a>
-                <a href="" class="title3 column is-underlined"></a>
-                <a href="" class="title4 column is-underlined"></a>
-                <a href="" class="title5 column is-underlined"></a>
-            </div>
-    </div>
 
-    <footer class="footer has-background-info is-size-3 has-text-centered">
-     <h2 class="foot">
-         Created by The Boolean Hooligans; 1st class project; 2022
-     </h2>
-    </footer>
+        <div class="column is-11 is-size-3 has-background-grey-light" id="random-news">
+            <h2 class="title has-text-centered is-size-2">Dogs in the News!</h2>
+            <a href="" class="title1 column is-underlined"></a>
+            <a href="" class="title2 column is-underlined"></a>
+            <a href="" class="title3 column is-underlined"></a>
+            <a href="" class="title4 column is-underlined"></a>
+            <a href="" class="title5 column is-underlined"></a>
+        </div>
+
+
+        <div class="column is-11 has-background-info is-size-3 has-text-centered" id="footer">
+            <h2 class="foot">
+                Created by The Boolean Hooligans; 1st class project; 2022
+            </h2>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
