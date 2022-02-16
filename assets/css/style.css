@@ -13,7 +13,7 @@ header {
     border-style:ridge;
     border-width: 10px;
     border-radius: 10px;
-    margin: 10px;
+    margin: 20px;
 }
 
 /* #banner_message {
@@ -51,10 +51,9 @@ h3 {
     cursor: pointer;
     font-size: 35px;
     border-radius: 45px;
-
 }
 .button:hover {
-    font-size: 30px;
+    font-size: 38px;
 }
 
 breed info
