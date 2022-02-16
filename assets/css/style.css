@@ -14,6 +14,7 @@ header {
     border-width: 10px;
     border-radius: 10px;
     margin: 20px;
+    background-image: -webkit-radial-gradient(lightblue,aqua,teal);
 }
 
 /* #banner_message {
@@ -27,6 +28,11 @@ h3 {
     border-radius: 45px;
 }
 
+.select-div {
+   border-style: ridge;
+    border-radius: 10px;
+    border-width: 10px;
+}
 .breed_select {
     font-weight: bold;
     cursor:pointer;
@@ -50,14 +56,16 @@ h3 {
     font-weight: bold;
     cursor: pointer;
     font-size: 35px;
+    border-style: ridge;
+    border-width: 10px;
     border-radius: 45px;
+    background-image: -webkit-radial-gradient(lightblue,aqua,teal);
 }
 .button:hover {
     font-size: 38px;
 }
 
-breed info
-.table {
+#breed_data_table {
     font-size: 30px;
     font-weight: bold;
     border-style: ridge; 
@@ -67,16 +75,23 @@ breed info
     margin: 10px;
 }
 
+#breed_image {
+    border-style: ridge;
+    border-radius: 10px;
+    border-width: 10px;
+}
+
 #random-news {
     border-style: ridge;
-    border-color: aqua;
     border-radius: 10px;
     border-width: 10px;
     margin: 10px;
+    background-image: -webkit-radial-gradient(lightblue,aqua,teal);
 }
 
 a {
     color: black;
+    font-weight: bold;
     text-align: center;
 }
 a:hover {
@@ -88,9 +103,11 @@ a:hover {
     border-style: ridge;
     border-radius: 10px;
     border-width: 10px;
+    background-image: -webkit-radial-gradient(lightblue)
 }
 
 .foot {
     font-size: 30px;
     font-weight: bold;
+    color: black;
 }
