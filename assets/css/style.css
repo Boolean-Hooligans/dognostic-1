@@ -73,12 +73,17 @@ h3 {
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
+    width: 800px;
+    height: 700px;
+
 }
 
 #breed_image {
     border-style: ridge;
     border-radius: 10px;
     border-width: 10px;
+    width: 800px;
+    height: 700px;
 }
 
 #random-news {
@@ -110,4 +115,11 @@ a:hover {
     font-size: 30px;
     font-weight: bold;
     color: black;
+}
+
+.show {
+    display: block;
+}
+.hide {
+    display: none;
 }
