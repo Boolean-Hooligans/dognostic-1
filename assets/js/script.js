@@ -11,7 +11,7 @@ $(".breed_search").on("input", function (e) {
 var $breed_select = $("select.breed_select");
 $breed_select.change(function () {
   var id = $(this).children(":selected").attr("id");
-  console.log(id);
+
   getDogByBreed(id);
 });
 
@@ -26,8 +26,6 @@ function populateBreedsSelect(breeds) {
   });
 }
 function getDogByBreed(breed_id) {
-  console.log("breed_id: ", breed_id);
-
   // search for images that contain the breed (breed_id=) and attach the breed object (include_breed=1)
   fetch("https://api.thedogapi.com/v1/breeds/search?q=" + breed_id, {
     method: "GET",
@@ -40,13 +38,10 @@ function getDogByBreed(breed_id) {
     .then((data) => {
       var imageId = data[0].reference_image_id;
       getDogImage(imageId);
-      console.log(data);
     });
 }
 // triggered when the breed select control changes
 function getDogImage(image_id) {
-  console.log("breed_id: ", image_id);
-
   // search for images that contain the breed (breed_id=) and attach the breed object (include_breed=1)
   fetch("https://api.thedogapi.com/v1/images/" + image_id, {
     method: "GET",
@@ -65,35 +60,33 @@ function getDogImage(image_id) {
         );
       } else {
         //else display the breed image and data
-        console.log("data: ", data);
+
         displayBreed(data);
       }
       //console.log('Success:', data);
     })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
+    .catch((error) => {});
 }
 // clear the image and table
 function clearBreed() {
   $("#breed_image").attr("src", "");
-  $("#breed_data_table tr").remove();
+  $("#breed_data_table div").remove();
 }
 
 // display the breed image and data
 function displayBreed(info) {
   $("#breed_image").attr("src", info.url);
-  $("#breed_data_table tr").remove();
+  $("#breed_data_table div").remove();
 
   var breed_data = info.breeds[0];
   $.each(breed_data, function (key, value) {
-    // as 'weight' and 'height'
     if (key == "weight" || key == "height") {
       value = value.metric;
     }
 
     if (key.indexOf("_") > 0) {
       key = key.replace(/_/g, " ");
+      // console.log(data);
     }
 
     // add a row to the table
