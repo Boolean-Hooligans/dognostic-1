@@ -17,7 +17,7 @@ header {
     background-image: -webkit-radial-gradient(lightblue,aqua,teal);
 }
 
-/* #banner_message {
+/* #banner_message {  
     need to center
 } */
 
@@ -68,17 +68,27 @@ h3 {
 #breed_data_table {
     font-size: 30px;
     font-weight: bold;
-    border-style: ridge; 
-    border-width: 10px;
+    text-align: center;
+    background-color: lightgrey;
     border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
+}
+    /* border-style: ridge; 
+    border-width: 10px;
+    border-radius: 10px; */
+    /* padding: 10px;
+    margin: 10px; */
+    /* width: 700px;
+    height: 700px; */
+
 }
 
 #breed_image {
-    border-style: ridge;
+    border-radius: 10px;
+    /* border-style: ridge;
     border-radius: 10px;
     border-width: 10px;
+    width: 700px;
+    height: 700px; */
 }
 
 #random-news {
@@ -110,4 +120,34 @@ a:hover {
     font-size: 30px;
     font-weight: bold;
     color: black;
+}
+
+/* media queries */
+
+@media screen and (max-width: 980px) {
+    :root {
+        width: 100%;
+            }
+h3 {
+
+}
+
+.button {
+    font-size: 10px;
+}
+
+}
+
+
+@media screen and (max-width: 768px) {
+    :root {
+        width: 100%;
+            }
+}
+
+
+@media screen and (max-width: 575px) {
+    :root {
+        width: 100%;
+            }
 }
