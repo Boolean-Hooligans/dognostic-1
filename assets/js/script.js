@@ -17,16 +17,14 @@ function saveBreed(selectedButton){
   var button4Text = document.getElementById("save4").textContent;
 
   // check if selected button text content = "SAVE BREED" or something else...
-
   // If "SAVE BREED" -> save currently selected breed from drop-down to selected button
-
 
   if (selectedButton === 1) {
     if (button1Text === "SAVE BREED") {
       document.getElementById("save1").textContent = breed_select.children(":selected").attr("id");
     
     } else {
-      getDogByBreed(button1Text);//ask jordan how to change drop down menu with value
+      getDogByBreed(button1Text);
     }
   }
   if (selectedButton === 2) {
@@ -34,7 +32,7 @@ function saveBreed(selectedButton){
       document.getElementById("save2").textContent = breed_select.children(":selected").attr("id");
     
     } else {
-      getDogByBreed(button2Text);//ask jordan how to change drop down menu with value
+      getDogByBreed(button2Text);
     }
   }
   if (selectedButton === 3) {
@@ -42,7 +40,7 @@ function saveBreed(selectedButton){
       document.getElementById("save3").textContent = breed_select.children(":selected").attr("id");
     
     } else {
-      getDogByBreed(button3Text);//ask jordan how to change drop down menu with value
+      getDogByBreed(button3Text);
     }
   }
   if (selectedButton === 4) {
@@ -50,7 +48,7 @@ function saveBreed(selectedButton){
       document.getElementById("save4").textContent = breed_select.children(":selected").attr("id");
     
     } else {
-      getDogByBreed(button4Text);//ask jordan how to change drop down menu with value
+      getDogByBreed(button4Text);
     }
   }
   
@@ -59,10 +57,10 @@ function saveBreed(selectedButton){
 
 
 // Breed search
-$('.breed_search').on('input', function (e) {
+// $('.breed_search').on('input', function (e) {
 
-  var search_str = $(this).val();
-});
+//   var search_str = $(this).val();
+// });
 
 // Setup the Controls
 
