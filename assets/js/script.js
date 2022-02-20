@@ -166,18 +166,14 @@ function displayBreed(info) {
     }
   }
   console.log(cleanData);
-
+// Dynamically adds breed data to the breed table
   $.each(cleanData, function (key, value) {
     console.log(key, value);
 
-    //   key.split(' ').map((word) => word[0].toUpperCase() + word.slice(1))
-    //   join(' ');
-    //  })
 
     if (!(key === "id" || key === "reference image id" || key === "origin")) {
       //  add a row to the table
       $("#breed_data_table").append(
-        // "<tr><td>" + key + "</td><td>" + value + "</td></tr>"
         "<div class='columns'><div class='column'>" +
           key +
           "</div><div class='column'>" +
@@ -211,7 +207,7 @@ function randomDogNews() {
     method: "GET",
     headers: {
       "x-rapidapi-host": "daily-dog-news.p.rapidapi.com",
-      "x-rapidapi-key": "5f11a0be5fmsh5a12f34eab0b62bp10b603jsn304276e4e806",
+      "x-rapidapi-key": "a771196338msh274eb7df871c5dfp1ddb90jsn462f123fdc7f",
     },
   })
     .then((response) => response.json())
