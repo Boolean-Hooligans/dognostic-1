@@ -1,7 +1,7 @@
 # dognostic
 
 ## Description of Project
-A dog breed informational website that will display dog breed information and in image of the dog breed. 
+A dog breed informational website that will display dog breed information and in image of the specific dog breed chosen. The website pulls all the avalible dog breeds from the Dog API and puts them in form for the user to select. 
 
 ## Aims/Goals
 
