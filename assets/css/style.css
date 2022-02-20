@@ -1,5 +1,5 @@
 body {
-    background-image: url('/assets/images/pawprints6.png');
+    background-image: url(../images/pawprints6.png);
     background-attachment: fixed;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     
@@ -115,7 +115,6 @@ a:hover {
     :root {
         width: 100%;
             }
-h3 {
 
 }
 
@@ -123,7 +122,6 @@ h3 {
     font-size: 10px;
 }
 
-}
 
 
 @media screen and (max-width: 768px) {
