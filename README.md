@@ -21,8 +21,13 @@ Dog news API Documentation
 Click [Here!](https://boolean-hooligans.github.io/dognostic-1/) to go to the deployed application
 
 ## My Repo link
-Click [Here!] (https://github.com/Boolean-Hooligans/dognostic-1) to access the repository!
+Click [Here!](https://github.com/Boolean-Hooligans/dognostic-1) to access the repository!
 
-## Screenshots w/ Captions
+## Screenshot of deployed application on load.
+![Alt text]:(https//github.com/Boolean-Hooligans/dognostic-1/blob/feature/newAPIkey/assets/images/page_on_load.png)
+
+## Screenshot of deployed application with saved dog breeds
+![Alt text]:(https://github.com/Boolean-Hooligans/dognostic-1/blob/feature/newAPIkey/assets/images/page_with_storage.png)
 
 ## Accessibility Audit
+![Alt text]:(https://github.com/Boolean-Hooligans/dognostic-1/blob/feature/newAPIkey/assets/images/Lighthouse_Screenshot.png)
