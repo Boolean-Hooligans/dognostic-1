@@ -1,7 +1,7 @@
 # dognostic
 
 ## Description of Project
-A dog themed app for project 1
+A dog breed informational website that will display dog breed information and in image of the dog breed. 
 
 ## Aims/Goals
 
@@ -11,11 +11,12 @@ A dog themed app for project 1
 
 ## Technologies Used
 
-HTML, CSS, Javascript, APIs
+HTML, CSS, Javascript, APIs, Bulma
 
 ## Challenges Faced
 
 ## Deployed Website link
+Click [Here!](https://boolean-hooligans.github.io/dognostic-1/) to go to the deloyed application
 
 ## My Repo link
 
