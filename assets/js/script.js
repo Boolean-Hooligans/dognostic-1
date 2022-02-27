@@ -4,12 +4,10 @@ api_key = "ef3680c6-31d5-47a8-88f2-51bfa1e66f94";
 var breeds;
 // save breeds buttons
 
-
 const saveToLocalStorage = (breed_id) => {
-localStorage.setItem('save1', "id")
-}
-function saveBreed(selectedButton){
- 
+  localStorage.setItem("save1", "id");
+};
+function saveBreed(selectedButton) {
   // get selected button text content
   var button1Text = document.getElementById("save1").textContent;
   var button2Text = document.getElementById("save2").textContent;
@@ -17,68 +15,73 @@ function saveBreed(selectedButton){
   var button4Text = document.getElementById("save4").textContent;
 
   // check if selected button text content = "SAVE BREED" or something else...
-
   // If "SAVE BREED" -> save currently selected breed from drop-down to selected button
-
 
   if (selectedButton === 1) {
     if (button1Text === "SAVE BREED") {
-      document.getElementById("save1").textContent = breed_select.children(":selected").attr("id");
-    
+      document.getElementById("save1").textContent = breed_select
+        .children(":selected")
+        .attr("id");
     } else {
-      getDogByBreed(button1Text);//ask jordan how to change drop down menu with value
+
+      getDogByBreed(button1Text);
+
     }
   }
   if (selectedButton === 2) {
     if (button2Text === "SAVE BREED") {
-      document.getElementById("save2").textContent = breed_select.children(":selected").attr("id");
-    
+      document.getElementById("save2").textContent = breed_select
+        .children(":selected")
+        .attr("id");
     } else {
-      getDogByBreed(button2Text);//ask jordan how to change drop down menu with value
+
+      getDogByBreed(button2Text);
+
     }
   }
   if (selectedButton === 3) {
     if (button3Text === "SAVE BREED") {
-      document.getElementById("save3").textContent = breed_select.children(":selected").attr("id");
-    
+      document.getElementById("save3").textContent = breed_select
+        .children(":selected")
+        .attr("id");
     } else {
-      getDogByBreed(button3Text);//ask jordan how to change drop down menu with value
+
+      getDogByBreed(button3Text);
+
     }
   }
   if (selectedButton === 4) {
     if (button4Text === "SAVE BREED") {
-      document.getElementById("save4").textContent = breed_select.children(":selected").attr("id");
-    
+      document.getElementById("save4").textContent = breed_select
+        .children(":selected")
+        .attr("id");
     } else {
-      getDogByBreed(button4Text);//ask jordan how to change drop down menu with value
+
+      getDogByBreed(button4Text);
+
     }
   }
-  
 }
 
-
-
 // Breed search
-$('.breed_search').on('input', function (e) {
 
+$(".breed_search").on("input", function (e) {
   var search_str = $(this).val();
 });
 
 // Setup the Controls
 
-var breed_select = $('select.breed_select');
+var breed_select = $("select.breed_select");
 breed_select.change(function () {
-  var id = $(this).children(":selected").attr("id");// export jquery to save breed function
-  console.log(id)
-  getDogByBreed(id)
-
+  var id = $(this).children(":selected").attr("id"); // export jquery to save breed function
+  console.log(id);
+  getDogByBreed(id);
 });
 
 // Put the breeds in the Select control
 function populateBreedsSelect(breeds) {
-
   breed_select.empty().append(function () {
-    var output = '';
+    var output = "";
 
     $.each(breeds, function (key, value) {
       output += '<option id="' + value.name + '">' + value.name + "</option>";
@@ -87,12 +90,11 @@ function populateBreedsSelect(breeds) {
   });
 }
 function getDogByBreed(breed_id) {
-  console.log('breed_id: ', breed_id);
+  console.log("breed_id: ", breed_id);
 
   // search for images that contain the breed (breed_id=) and attach the breed object (include_breed=1)get dog breed vs get dog image
-  fetch('https://api.thedogapi.com/v1/breeds/search?q=' + breed_id, {
-    method: 'GET',
-
+  fetch("https://api.thedogapi.com/v1/breeds/search?q=" + breed_id, {
+    method: "GET",
 
     headers: {
       "Content-Type": "application/vnd.api+json",
@@ -144,25 +146,41 @@ function displayBreed(info) {
   $("#breed_data_table div").remove();
 
   var breed_data = info.breeds[0];
-  $.each(breed_data, function (key, value) {
-    if (key == "weight" || key == "height") {
-      value = value.metric;
-    }
+  var cleanData = {};
 
-    if (key.indexOf("_") > 0) {
-      key = key.replace(/_/g, " ");
-      // console.log(data);
+  for (var key in breed_data) {
+    if (!(key === "id" || key === "reference_image_id" || key === "origin")) {
+      if (key.indexOf("_") > 0) {
+        var newKey = key;
+        newKey = key.replace(/_/g, " ");
+        cleanData[newKey] = breed_data[key];
+      } else {
+        if (key === "weight") {
+          cleanData[key] = breed_data[key].metric + " kg";
+        } else if (key === "height") {
+          cleanData[key] = breed_data[key].metric + " cm";
+        } else {
+          cleanData[key] = breed_data[key];
+        }
+      }
     }
+  }
+  console.log(cleanData);
+// Dynamically adds breed data to the breed table
+  $.each(cleanData, function (key, value) {
+    console.log(key, value);
 
-    // add a row to the table
-    $("#breed_data_table").append(
-      // "<tr><td>" + key + "</td><td>" + value + "</td></tr>"
-      "<div class='columns'><div class='column'>" +
-        key +
-        "</div><div class='column'>" +
-        value +
-        "</div></div>"
-    );
+
+    if (!(key === "id" || key === "reference image id" || key === "origin")) {
+      //  add a row to the table
+      $("#breed_data_table").append(
+        "<div class='columns'><div class='column'>" +
+          key +
+          "</div><div class='column'>" +
+          value +
+          "</div></div>"
+      );
+    }
   });
 }
 
@@ -189,7 +207,7 @@ function randomDogNews() {
     method: "GET",
     headers: {
       "x-rapidapi-host": "daily-dog-news.p.rapidapi.com",
-      "x-rapidapi-key": "5f11a0be5fmsh5a12f34eab0b62bp10b603jsn304276e4e806",
+      "x-rapidapi-key": "a771196338msh274eb7df871c5dfp1ddb90jsn462f123fdc7f",
     },
   })
     .then((response) => response.json())

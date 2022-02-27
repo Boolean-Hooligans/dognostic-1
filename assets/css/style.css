@@ -1,5 +1,5 @@
 body {
-    background-image: url('../../images/pawprints6.png');
+    background-image: url(../images/pawprints6.png);
     background-attachment: fixed;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     
@@ -17,11 +17,16 @@ header {
     background-image: -webkit-radial-gradient(lightcyan,aqua, navy);
 }
 
+
 .select-breed {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
+
+h3 {
+main
     text-align: center;
     border-style: ridge;
     border-radius: 10px;
@@ -57,7 +62,7 @@ header {
 .button:hover {
     background-image: -webkit-radial-gradient(lightcyan,aqua, blue);
 }
-
+/* Breed information table */
 #breed_data_table {
     font-weight: bold;
     font-size: 12px;
@@ -72,6 +77,14 @@ header {
     border-radius: 10px;
 }
 
+
+
+
+#breed_image {
+    border-radius: 10px;
+   
+}
+/* Dog news container */
 #random-news {
     border-style: ridge;
     border-radius: 10px;
@@ -79,7 +92,7 @@ header {
     margin: 10px;
     background-image: -webkit-radial-gradient(lightcyan,aqua,teal);
 }
-
+/* Dog news header and link */
 a {
     color: black;
     font-weight: bold;
@@ -103,3 +116,33 @@ a:hover {
     font-weight: bold;
     color: black;
 }
+
+
+/* media queries */
+
+@media screen and (max-width: 980px) {
+    :root {
+        width: 100%;
+            }
+
+}
+
+.button {
+    font-size: 10px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    :root {
+        width: 100%;
+            }
+}
+
+
+@media screen and (max-width: 575px) {
+    :root {
+        width: 100%;
+            }
+}
+
