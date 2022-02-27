@@ -13,28 +13,24 @@
 <body class="body">
     <!-- Header Banner -->
     <header class="section">
-        <h1 class='title is-size-3 has-text-centered'>
-            DOGNOSTIC:
-        </h1>
-        <p class='subtitle is-size-5 has-text-centered'>
-            Thinking about getting a dog? Let us help you make an informed decision with breed info, photos and dog
-            related news headlines!
-        </p>
+        <h1 class='title is-size-1 has-text-centered'>DOGNOSTIC</div>
+            <h2 class='subtitle is-size-2 has-text-centered'>
+                The one stop shop for all the info and photos you'll need to decide what dog breed or
+                breed mix is right for you!
+            </h2>
+
     </header>
-
     <div class="columns is-centered is-vcentered is-multiline">
-
-        <div class="column is-one-third">
-
-            <div class='select-breed'>
-                <h2 class="title is-size-4">Select a Breed:</h2>
+        <div class="column is-one-quarter">
+            <div class='select-div has-background-info'>
+                <h3 class="title is-size-1">Select a Breed:</h3>
                 <div id="banner-message">
-                    <select class="breed_select is-size-7">
+                    <!-- <input class="breed_search"/> -->
+                    <select class="breed_select is-size-3">
                         <option></option>
                     </select>
                 </div>
             </div>
-
             <!-- Dog breed save buttons -->
             <div class="search-history">
 
@@ -43,32 +39,19 @@
                 <button class="button is-rounded is-large has-background-primary is-size-3" id="save3" onclick="saveBreed(3)">SAVE BREED</button>
                 <button class="button is-rounded is-large has-background-primary is-size-3" id="save4" onclick="saveBreed(4)">SAVE BREED</button>
 
-            <div class="search-history">
-                <button class="button is-rounded has-background-primary is-size-6" id="save1"
-                    onclick="saveBreed(1)">SAVE BREED</button>
-                <button class="button is-rounded has-background-primary is-size-6" id="save2"
-                    onclick="saveBreed(2)">SAVE BREED</button>
-                <button class="button is-rounded has-background-primary is-size-6" id="save3"
-                    onclick="saveBreed(3)">SAVE BREED</button>
-                <button class="button is-rounded has-background-primary is-size-6" id="save4"
-                    onclick="saveBreed(4)">SAVE BREED</button>
             </div>
-
         </div>
         <!-- Displays dog breed information -->
         <div class='column is-one-third' id="breed_data">
-
-            <div class="table is-capitalized" id="breed_data_table"></div>
-
             <div class="table is-size-4" id="breed_data_table">
                     
             </div>
+
 
         </div>
         <!-- Table that displays breed image -->
         <div class="column is-one-third">
             <img id="breed_image" src="" />
-
                 </div>
 
         <!-- Displays 5 of the most recent dog news -->
@@ -80,31 +63,17 @@
             <a href="" class="title3 column is-underlined" target="_blank"></a>
             <a href="" class="title4 column is-underlined" target="_blank"></a>
             <a href="" class="title5 column is-underlined" target="_blank"></a>
-
-        </div>
-    </div>
-
-    <div class="colunms">
-        <div class="column" id="random-news">
-            <h2 class="title has-text-centered is-size-5">Dogs in the News!<h2>
-                    <a href="" class="title1 column is-underlined"></a>
-                    <a href="" class="title2 column is-underlined"></a>
-                    <a href="" class="title3 column is-underlined"></a>
-                    <a href="" class="title4 column is-underlined"></a>
-                    <a href="" class="title5 column is-underlined"></a>
         </div>
 
-        <div class="column has-text-centered" id="footer">
+
+        <div class="column is-11 has-background-info is-size-3 has-text-centered" id="footer">
             <h2 class="foot">
-                Created by The Boolean Hooligans; 1st class project; 2022.
+                Created by The Boolean Hooligans; 1st class project; 2022
             </h2>
         </div>
-
     </div>
-
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="./assets/js/script.js"></script>
-
 </body>
 
 </html>

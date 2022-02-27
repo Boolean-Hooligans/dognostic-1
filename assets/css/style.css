@@ -13,67 +13,60 @@ header {
     border-style:ridge;
     border-width: 10px;
     border-radius: 10px;
-    margin: 10px;
-    background-image: -webkit-radial-gradient(lightcyan,aqua, navy);
+    margin: 20px;
+    background-image: -webkit-radial-gradient(lightblue,aqua,teal);
 }
 
 
-.select-breed {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-
-
 h3 {
-main
     text-align: center;
-    border-style: ridge;
+    padding: 10px;
+    font-size: 35px;
+    border-radius: 45px;
+}
+
+.select-div {
+   border-style: ridge;
     border-radius: 10px;
     border-width: 10px;
-    padding: 10px;
-    margin: 10px;
-    background-image: -webkit-radial-gradient(lightcyan,aqua,teal);
 }
 .breed_select {
     font-weight: bold;
     cursor:pointer;
-    padding: 5px;
+    padding: 10px;
     text-align: center;
     border-radius: 10px;
+    width: 18vw;
+    height: 8vh;
 }
 
 /* search history container */
 .search-history {
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    padding: 10px;
 }
 
 /* search history buttons */
 .button{
-    margin: 5px;
+    margin: 10px;
     font-weight: bold;
     cursor: pointer;
+    font-size: 35px;
     border-style: ridge;
-    border-width: 7px;
-    background-image: -webkit-radial-gradient(lightcyan,aqua,teal);
+    border-width: 10px;
+    border-radius: 45px;
+    background-image: -webkit-radial-gradient(lightblue,aqua,teal);
 }
 .button:hover {
-    background-image: -webkit-radial-gradient(lightcyan,aqua, blue);
+    font-size: 38px;
 }
 /* Breed information table */
 #breed_data_table {
+    font-size: 30px;
     font-weight: bold;
-    font-size: 12px;
+    text-align: center;
     background-color: lightgrey;
-    border-radius: 10px;
-    margin: 10px;
-    line-height:12px;
-    padding-left: 5px;
-}
-
-#breed_image {
     border-radius: 10px;
 }
 
@@ -90,33 +83,31 @@ main
     border-radius: 10px;
     border-width: 10px;
     margin: 10px;
-    background-image: -webkit-radial-gradient(lightcyan,aqua,teal);
+    background-image: -webkit-radial-gradient(lightblue,aqua,teal);
 }
 /* Dog news header and link */
 a {
     color: black;
     font-weight: bold;
-    font-size: 12px;
-    /* text-align: center; */
+    text-align: center;
 }
 a:hover {
-    color: navy;
-}
+    color: teal;
 
+}
 #footer {
     margin: 10px;
     border-style: ridge;
     border-radius: 10px;
     border-width: 10px;
-    background-image: -webkit-radial-gradient(lightcyan,aqua, navy);
+    background-image: -webkit-radial-gradient(lightblue)
 }
 
 .foot {
-    font-size: 15px;
+    font-size: 30px;
     font-weight: bold;
     color: black;
 }
-
 
 /* media queries */
 
@@ -145,4 +136,3 @@ a:hover {
         width: 100%;
             }
 }
-
