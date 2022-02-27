@@ -13,82 +13,63 @@ header {
     border-style:ridge;
     border-width: 10px;
     border-radius: 10px;
-    margin: 20px;
-    background-image: -webkit-radial-gradient(lightblue,aqua,teal);
+    margin: 10px;
+    background-image: -webkit-radial-gradient(lightcyan,aqua, navy);
 }
 
-/* #banner_message {  
-    need to center
-} */
-
-h3 {
+.select-breed {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 10px;
-    font-size: 35px;
-    border-radius: 45px;
-}
-
-.select-div {
-   border-style: ridge;
+    border-style: ridge;
     border-radius: 10px;
     border-width: 10px;
+    padding: 10px;
+    margin: 10px;
+    background-image: -webkit-radial-gradient(lightcyan,aqua,teal);
 }
 .breed_select {
     font-weight: bold;
     cursor:pointer;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     border-radius: 10px;
-    width: 18vw;
-    height: 8vh;
 }
 
 /* search history container */
 .search-history {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    margin: 10px;
 }
 
 /* search history buttons */
 .button{
-    margin: 10px;
+    margin: 5px;
     font-weight: bold;
     cursor: pointer;
-    font-size: 35px;
     border-style: ridge;
-    border-width: 10px;
-    border-radius: 45px;
-    background-image: -webkit-radial-gradient(lightblue,aqua,teal);
+    border-width: 7px;
+    background-image: -webkit-radial-gradient(lightcyan,aqua,teal);
 }
 .button:hover {
-    font-size: 38px;
+    background-image: -webkit-radial-gradient(lightcyan,aqua, blue);
 }
 
 #breed_data_table {
-    font-size: 30px;
     font-weight: bold;
-    text-align: center;
+    font-size: 12px;
     background-color: lightgrey;
     border-radius: 10px;
-}
-    /* border-style: ridge; 
-    border-width: 10px;
-    border-radius: 10px; */
-    /* padding: 10px;
-    margin: 10px; */
-    /* width: 700px;
-    height: 700px; */
-
+    margin: 10px;
+    line-height:12px;
+    padding-left: 5px;
 }
 
 #breed_image {
     border-radius: 10px;
-    /* border-style: ridge;
-    border-radius: 10px;
-    border-width: 10px;
-    width: 700px;
-    height: 700px; */
 }
 
 #random-news {
@@ -96,58 +77,29 @@ h3 {
     border-radius: 10px;
     border-width: 10px;
     margin: 10px;
-    background-image: -webkit-radial-gradient(lightblue,aqua,teal);
+    background-image: -webkit-radial-gradient(lightcyan,aqua,teal);
 }
 
 a {
     color: black;
     font-weight: bold;
-    text-align: center;
+    font-size: 12px;
+    /* text-align: center; */
 }
 a:hover {
-    color: teal;
-
+    color: navy;
 }
+
 #footer {
     margin: 10px;
     border-style: ridge;
     border-radius: 10px;
     border-width: 10px;
-    background-image: -webkit-radial-gradient(lightblue)
+    background-image: -webkit-radial-gradient(lightcyan,aqua, navy);
 }
 
 .foot {
-    font-size: 30px;
+    font-size: 15px;
     font-weight: bold;
     color: black;
-}
-
-/* media queries */
-
-@media screen and (max-width: 980px) {
-    :root {
-        width: 100%;
-            }
-h3 {
-
-}
-
-.button {
-    font-size: 10px;
-}
-
-}
-
-
-@media screen and (max-width: 768px) {
-    :root {
-        width: 100%;
-            }
-}
-
-
-@media screen and (max-width: 575px) {
-    :root {
-        width: 100%;
-            }
 }
