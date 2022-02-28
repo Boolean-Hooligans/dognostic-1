@@ -24,10 +24,10 @@ Click [Here!](https://boolean-hooligans.github.io/dognostic-1/) to go to the dep
 Click [Here!](https://github.com/Boolean-Hooligans/dognostic-1) to access the repository!
 
 ## Screenshot of deployed application on load.
-![Alt text](https://github.com/Boolean-Hooligans/dognostic-1/blob/main/assets/images/page_on_load.png)
+![Page as it appears once first deployed](https://github.com/Boolean-Hooligans/dognostic-1/blob/main/assets/images/page_on_load.png)
 
 ## Screenshot of deployed application with saved dog breeds
-![Alt text](https://github.com/Boolean-Hooligans/dognostic-1/blob/main/assets/images/page_with_storage.png)
+![Page showing dog breeds saved to search history](https://github.com/Boolean-Hooligans/dognostic-1/blob/main/assets/images/page_with_storage.png)
 
 ## Accessibility Audit
-![Alt text](https://github.com/Boolean-Hooligans/dognostic-1/blob/main/assets/images/Lighthouse_Screenshot.png)
+![Lighthouse webpage performance review](https://github.com/Boolean-Hooligans/dognostic-1/blob/main/assets/images/Lighthouse_Screenshot.png)
